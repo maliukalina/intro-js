@@ -38,8 +38,8 @@ getStudents("Toribio")*/
 
 
 const createstudent = (student_id,first_name,last_name,email,phone,admission_date) => {
- const query = ` INSERT INTO students (student_id,first_name,last_name,email,phone,admission_date)
- VALUES (${student_id},"${first_name}"","${last_name}","${email}","${phone}"","${admission_date}") `
+ const query = `INSERT INTO students (student_id,first_name,last_name,email,phone,admission_date)
+ VALUES (${student_id},"${first_name}","${last_name}","${email}","${phone}","${admission_date}") `
 
 connection.query(query, (error,results) => {
   if(error) {
@@ -48,6 +48,6 @@ connection.query(query, (error,results) => {
     console.log(results)
 })
 }
-createstudent("899", "John", "Silver", "john@gmail.com", "4556789876","2021-09-29" )
+createstudent(899, "John", "Silver", "john@gmail.com", "4556789876","2021-09-29" )
 
 connection.end()
